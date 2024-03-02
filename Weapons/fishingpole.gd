@@ -13,7 +13,3 @@ func _physics_process(delta):
 	if enemies_in_range.size() > 0:
 		var target = enemies_in_range[0]
 		look_at(target.global_position)
-
-
-
-	

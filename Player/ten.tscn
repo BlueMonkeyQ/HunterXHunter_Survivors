@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dci1cqm5bojoc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7wyr"]
+bg_color = Color(0.25098, 0.541176, 0.8, 1)
+
+[node name="Ten" type="Area2D"]
+
+[node name="TenBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_t7wyr")
+step = 1.0
+
+[node name="TenRegen" type="Timer" parent="."]
