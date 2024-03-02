@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Utility/enemy_spawner.gd" id="1_qou3h"]
 [ext_resource type="PackedScene" uid="uid://c8hkej82kiy8r" path="res://Utility/enemy_spawner.tscn" id="2_gg0c4"]
 
-[node name="World 2" type="Node2D"]
+[node name="World 1" type="Node2D"]
 script = ExtResource("1_qou3h")
 
 [node name="Player" parent="." instance=ExtResource("1_df28s")]
