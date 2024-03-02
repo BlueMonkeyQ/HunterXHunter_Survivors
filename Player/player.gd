@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 var maximum_health: int = 10
 var health: int = 10
+
+var maximum_ten: float = 10.0
+var ten:float = 0.0
+var ten_regen: float = 0.5
+
 var movement_speed: float = 200.0
 
 func _physics_process(delta):
@@ -18,3 +23,12 @@ func process_movement():
 func _on_hurt_box_hurt(damage):
 	print("Player took Damage: ", damage)
 	health -= damage
+
+# Regenerate Ten
+func _on_ten_regen_timeout():
+	ten += ten_regen
+	
+	if ten >= maximum_ten:
+		ten = maximum_ten
+	
+	%Ten/TenBar.value = ten
