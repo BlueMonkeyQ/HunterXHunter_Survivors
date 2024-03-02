@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck2hx2njg2e4g"]
+
+[ext_resource type="Script" path="res://Weapons/fishingpole.gd" id="1_anr1r"]
+[ext_resource type="Texture2D" uid="uid://dxi83sgggtaxt" path="res://Textures/Fishingpole.png" id="1_dqepm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkx3j"]
+radius = 79.1581
+
+[node name="Fishingpole" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_anr1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dkx3j")
+
+[node name="Pivot" type="Marker2D" parent="."]
+position = Vector2(28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot"]
+texture = ExtResource("1_dqepm")
+
+[node name="Projectile Point" type="Marker2D" parent="Pivot/Sprite2D"]
